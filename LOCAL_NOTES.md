@@ -23,6 +23,16 @@ ng g c welcome --module app.module
 npm install @angular/flex-layout @angular/cdk --save
 ```
 
+# Install moment for internationalization in components like datepicker 
+_(not done here)_
+
+```
+npm install moment --save
+```
+- Then import MatMomentDateModule instead of MatNativeDateModule
+
+
+
 # Git
 ```
 git add .gitignore
