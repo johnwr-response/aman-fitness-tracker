@@ -11,10 +11,11 @@
       <mat-error>Has to be at least 6 characters long.</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Your birthdate" [matDatepicker]="datepicker" [max]="maxDate">
+      <input matInput placeholder="Your birthdate" [matDatepicker]="datepicker" [max]="maxDate" ngModel name="birthdate" required>
       <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
       <mat-datepicker #datepicker></mat-datepicker>
     </mat-form-field>
+    <mat-checkbox ngModel name="agree" required labelPosition="after" color="primary">Agree to Terms and Conditions.</mat-checkbox>
     <button type="submit" mat-raised-button color="primary">Submit</button>
   </form>
 </section>
