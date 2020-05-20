@@ -18,6 +18,11 @@ ng g c training/past-trainings --module app.module
 ng g c welcome --module app.module
 ```
 
+# Install flex layout
+```
+npm install @angular/flex-layout @angular/cdk --save
+```
+
 # Git
 ```
 git add .gitignore
