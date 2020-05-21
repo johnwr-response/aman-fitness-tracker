@@ -16,6 +16,9 @@ ng g c training/current-training --module app.module
 ng g c training/new-training --module app.module
 ng g c training/past-trainings --module app.module
 ng g c welcome --module app.module
+
+ng g c navigation/header --module app.module
+ng g c navigation/sidenav-list --module app.module
 ```
 
 # Install flex layout
