@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "aman-fitness-tracker": {
+      "hosting": {
+        "fitness-tracker": [
+          "aman-fitness-tracker"
+        ]
+      }
+    }
+  }
+}
