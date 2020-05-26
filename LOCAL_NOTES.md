@@ -33,6 +33,29 @@ npm install moment --save
 # then import MatMomentDateModule instead of MatNativeDateModule
 ```
 
+# Firebase Links
+https://console.firebase.google.com/u/1/project/aman-fitness-tracker/overview
+https://github.com/angular/angularfire
+
+# AngularFire Installation
+```
+ng add @angular/fire
+npm i firebase
+```
+
+# Note about RxJS 6
+Instead of
+```
+....snapshotChanges()
+    .map(docArray => { ... })
+```
+you should use the pipe()  method provided by RxJS:
+```
+....snapshotChanges()
+    .pipe(map(docArray => { ... }))
+```
+It simply wraps the RxJS operator you want to use - in this case map() . You can actually use multiple pipe calls on the same observable - simply chain them after each other.
+
 # Links
 - Angular Material Setup Docs: https://material.angular.io/guide/getting-started
 - Angular Material Component Docs: https://material.angular.io/components/categories
@@ -47,15 +70,7 @@ npm install moment --save
 - Detailed Docs on the Data Table: https://material.angular.io/components/table/overview
 - Angular Fire6 article (if needed): https://dev.to/sreekanth_2108/upgrading-to-angularfire-6-with-angular-9-4ce1
 
-# Firebase
-https://console.firebase.google.com/u/1/project/aman-fitness-tracker/overview
-https://github.com/angular/angularfire
 
-# AngularFire
-```
-ng add @angular/fire
-npm i firebase
-```
 
 # Git
 ```
