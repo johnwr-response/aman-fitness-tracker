@@ -38,6 +38,7 @@ export class AuthService {
   }
 
   isAuth() {
+    if (!this.user) return null;
     return this.user !== null;
   }
 
