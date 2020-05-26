@@ -46,6 +46,9 @@ npm install moment --save
 - More on the Toolbar: https://material.angular.io/components/toolbar/overview
 - Detailed Docs on the Data Table: https://material.angular.io/components/table/overview
 
+# Firebase
+https://console.firebase.google.com/u/1/project/aman-fitness-tracker/overview
+
 # Git
 ```
 git add .gitignore
