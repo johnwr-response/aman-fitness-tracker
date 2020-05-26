@@ -44,6 +44,7 @@ npm install moment --save
 - More on Spinners: https://material.angular.io/components/progress-spinner/overview
 - More on Sidenav: https://material.angular.io/components/sidenav/overview
 - More on the Toolbar: https://material.angular.io/components/toolbar/overview
+- Detailed Docs on the Data Table: https://material.angular.io/components/table/overview
 
 # Git
 ```
