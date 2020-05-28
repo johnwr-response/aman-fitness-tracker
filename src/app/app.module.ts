@@ -21,6 +21,7 @@ import {StopTrainingComponent} from "./training/current-training/stop-training.c
 import {AuthService} from "./auth/auth.service";
 import {TrainingService} from "./training/training.service";
 import {environment} from "../environments/environment";
+import {FirebaseDatePipe} from "./training/past-trainings/firebase-date.pipe";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {environment} from "../environments/environment";
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    FirebaseDatePipe
   ],
   imports: [
     BrowserModule,
