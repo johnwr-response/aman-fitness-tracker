@@ -22,6 +22,7 @@ import {AuthService} from "./auth/auth.service";
 import {TrainingService} from "./training/training.service";
 import {environment} from "../environments/environment";
 import {FirebaseDatePipe} from "./training/past-trainings/firebase-date.pipe";
+import {AngularFireAuthModule} from "@angular/fire/auth";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {FirebaseDatePipe} from "./training/past-trainings/firebase-date.pipe";
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
