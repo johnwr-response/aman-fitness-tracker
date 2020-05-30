@@ -76,7 +76,10 @@ It simply wraps the RxJS operator you want to use - in this case map() . You can
 - More on the Toolbar: https://material.angular.io/components/toolbar/overview
 - Detailed Docs on the Data Table: https://material.angular.io/components/table/overview
 - Angular Fire6 article (if needed): https://dev.to/sreekanth_2108/upgrading-to-angularfire-6-with-angular-9-4ce1
-
+- Angularfire Setup Docs: https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md
+- Angularfire Official Docs: https://github.com/angular/angularfire2/blob/master/docs/firestore/collections.md
+- Firebase Docs: https://firebase.google.com/docs/web/setup
+- More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 
 
 # Git
