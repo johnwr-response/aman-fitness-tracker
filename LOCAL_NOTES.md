@@ -37,6 +37,13 @@ npm install moment --save
 https://console.firebase.google.com/u/1/project/aman-fitness-tracker/overview
 https://github.com/angular/angularfire
 
+# Securing Firebase
+In firebase console, go to database | rules and add the below rule to only allow access to requests with a valid auth:
+```
+allow read, write: if request.auth != null;
+```
+
+
 # AngularFire Installation
 ```
 ng add @angular/fire
