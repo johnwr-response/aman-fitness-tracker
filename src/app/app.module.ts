@@ -23,6 +23,7 @@ import {TrainingService} from "./training/training.service";
 import {environment} from "../environments/environment";
 import {FirebaseDatePipe} from "./training/past-trainings/firebase-date.pipe";
 import {AngularFireAuthModule} from "@angular/fire/auth";
+import {UIService} from "./shared/ui.service";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
