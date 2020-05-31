@@ -80,7 +80,8 @@ It simply wraps the RxJS operator you want to use - in this case map() . You can
 - Angularfire Official Docs: https://github.com/angular/angularfire2/blob/master/docs/firestore/collections.md
 - Firebase Docs: https://firebase.google.com/docs/web/setup
 - More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
-
+- More on Modules: https://angular.io/guide/ngmodules
+- More on Lazy Loading: https://angular.io/guide/lazy-loading-ngmodules
 
 # Git
 ```
