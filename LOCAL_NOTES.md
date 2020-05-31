@@ -63,6 +63,13 @@ you should use the pipe()  method provided by RxJS:
 ```
 It simply wraps the RxJS operator you want to use - in this case map() . You can actually use multiple pipe calls on the same observable - simply chain them after each other.
 
+# Install NgRX
+```
+npm install --save @ngrx/store
+```
+
+
+
 # Links
 - Angular Material Setup Docs: https://material.angular.io/guide/getting-started
 - Angular Material Component Docs: https://material.angular.io/components/categories

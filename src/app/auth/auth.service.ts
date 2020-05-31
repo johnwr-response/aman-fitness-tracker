@@ -1,11 +1,12 @@
-import {AuthData} from "./auth-data.model";
-import {Subject} from "rxjs";
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
 import {AngularFireAuth} from "@angular/fire/auth";
-import {TrainingService} from "../training/training.service";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {Subject} from "rxjs";
+import { Store } from '@ngrx/store'
+import {AuthData} from "./auth-data.model";
 import {UIService} from "../shared/ui.service";
+import {TrainingService} from "../training/training.service";
+import * as fromApp from '../app.reducer';
 
 @Injectable()
 export class AuthService {
@@ -16,7 +17,8 @@ export class AuthService {
     private router: Router,
     private afAuth: AngularFireAuth,
     private trainingService: TrainingService,
-    private uiService: UIService
+    private uiService: UIService,
+    private store: Store<{ui: fromApp.State}>
   ) {}
 
   initAuthListener() {
@@ -35,26 +37,32 @@ export class AuthService {
   }
 
   registerUser(authData: AuthData) {
-    this.uiService.loadingStateChanged.next(true);
+    // this.uiService.loadingStateChanged.next(true);
+    this.store.dispatch({type: 'START_LOADING'})
     this.afAuth
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then((result) => {
-        this.uiService.loadingStateChanged.next(false);
+        // this.uiService.loadingStateChanged.next(false);
+        this.store.dispatch({type: 'STOP_LOADING'})
       })
       .catch(error => {
-        this.uiService.loadingStateChanged.next(false);
+        //this.uiService.loadingStateChanged.next(false);
+        this.store.dispatch({type: 'STOP_LOADING'})
         this.uiService.showSnackbar(error.message, null, 3000);
       });
   }
 
   login(authData: AuthData) {
-    this.uiService.loadingStateChanged.next(true);
+    // this.uiService.loadingStateChanged.next(true);
+    this.store.dispatch({type: 'START_LOADING'})
     this.afAuth.signInWithEmailAndPassword(authData.email, authData.password)
       .then((result) => {
-        this.uiService.loadingStateChanged.next(false);
+        // this.uiService.loadingStateChanged.next(false);
+        this.store.dispatch({type: 'STOP_LOADING'})
       })
       .catch(error => {
-        this.uiService.loadingStateChanged.next(false);
+        // this.uiService.loadingStateChanged.next(false);
+        this.store.dispatch({type: 'STOP_LOADING'})
         this.uiService.showSnackbar(error.message, null, 3000);
       });
 
