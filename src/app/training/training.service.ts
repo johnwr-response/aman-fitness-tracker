@@ -61,11 +61,11 @@ export class TrainingService {
   cancelExercise(progress: number) {
     this.store.select(fromTraining.getActiveTraining).pipe(take(1)).subscribe(ex => {
       this.addDataToDatabase({
-        ...this.runningExercise,
+        ...ex,
         duration: ex.duration * (progress / 100),
         calories: ex.calories * (progress / 100),
         date: new Date(),
-        state: 'cancelled'  // Instructor wrote 'completed', which is wrong?
+        state: 'cancelled'
       });
       this.store.dispatch(new Training.StopTraining());
     })
