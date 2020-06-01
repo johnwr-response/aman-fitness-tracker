@@ -68,6 +68,10 @@ It simply wraps the RxJS operator you want to use - in this case map() . You can
 npm install --save @ngrx/store
 ```
 
+# Deploying to Firebase Hosting
+```
+ng build --prod
+```
 
 
 # Links
