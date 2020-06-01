@@ -89,6 +89,8 @@ npm install --save @ngrx/store
 - More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 - More on Modules: https://angular.io/guide/ngmodules
 - More on Lazy Loading: https://angular.io/guide/lazy-loading-ngmodules
+- NgRx Official Repo & Docs: https://github.com/ngrx/platform
+- RxJS in Detail: https://academind.com/learn/javascript/understanding-rxjs/
 
 # Git
 ```
