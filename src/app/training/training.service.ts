@@ -1,6 +1,6 @@
 import {Exercise} from "./exercise.model";
 import {Subject, Subscription} from "rxjs";
-import {map} from "rxjs/operators";
+import {map, take} from "rxjs/operators";
 import {Injectable} from "@angular/core";
 import {AngularFirestore} from "@angular/fire/firestore";
 import {UIService} from "../shared/ui.service";
@@ -52,24 +52,25 @@ export class TrainingService {
   }
 
   completeExercise() {
-    this.addDataToDatabase({ ...this.runningExercise, date: new Date(), state: 'completed' });
-    this.store.dispatch(new Training.StopTraining());
+    this.store.select(fromTraining.getActiveTraining).pipe(take(1)).subscribe(ex => {
+      this.addDataToDatabase({ ...ex, date: new Date(), state: 'completed' });
+      this.store.dispatch(new Training.StopTraining());
+    })
   }
 
   cancelExercise(progress: number) {
-    this.addDataToDatabase({
-      ...this.runningExercise,
-      duration: this.runningExercise.duration * (progress / 100),
-      calories: this.runningExercise.calories * (progress / 100),
-      date: new Date(),
-      state: 'cancelled'
-    });
-    this.store.dispatch(new Training.StopTraining());
+    this.store.select(fromTraining.getActiveTraining).pipe(take(1)).subscribe(ex => {
+      this.addDataToDatabase({
+        ...this.runningExercise,
+        duration: ex.duration * (progress / 100),
+        calories: ex.calories * (progress / 100),
+        date: new Date(),
+        state: 'cancelled'  // Instructor wrote 'completed', which is wrong?
+      });
+      this.store.dispatch(new Training.StopTraining());
+    })
   }
 
-  getRunningExercise() {
-    return { ...this.runningExercise };
-  }
 
   fetchCompletedOrCancelledExercises() {
     this.fbSubs.push(this.db.collection('finishedExercises').valueChanges().subscribe((exercises: Exercise[]) => {
