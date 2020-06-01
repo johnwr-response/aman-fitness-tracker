@@ -69,8 +69,16 @@ npm install --save @ngrx/store
 ```
 
 # Deploying to Firebase Hosting
+Go to Firebase, click on hosting, follow instructions
 ```
 ng build --prod
+npm install -g firebase-tools
+firebase login
+firebase init
+# Choose dist/fitness-tracker as folder
+# Choose yes to single-page-application
+# Choose no to overwrite html file
+firebase deploy
 ```
 
 
