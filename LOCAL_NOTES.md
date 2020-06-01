@@ -101,6 +101,8 @@ firebase deploy
 - More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 - More on Modules: https://angular.io/guide/ngmodules
 - More on Lazy Loading: https://angular.io/guide/lazy-loading-ngmodules
+- Official Deployment Guide: https://angular.io/guide/deployment
+- Official Firebase Hosting Docs: https://firebase.google.com/docs/hosting/
 
 # Git
 ```
