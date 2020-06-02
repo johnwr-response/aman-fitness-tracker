@@ -81,6 +81,14 @@ firebase init
 firebase deploy
 ```
 
+# Angular Material Theme
+### Palettes
+- Primary palette (Used typically across all screens)
+- Accent palette (Used typically on Interactive elements)
+- Warn palette (Used typically on conveying warnings)
+- Foreground palette (Used typically on text and icons)
+- Background palette (Used typically on backgrounds)
+
 
 # Links
 - Angular Material Setup Docs: https://material.angular.io/guide/getting-started
