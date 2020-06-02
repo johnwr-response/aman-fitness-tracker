@@ -92,6 +92,18 @@ firebase deploy
 ### Adding Themes with Angular 6 or later
 Edit the styles section in the angular.json file
 
+# Academind
+I got a lot of other high-quality & bestselling courses you might be interested in: https://academind.com/learn/our-courses/
+
+I'd love to welcome you on board of any of these courses! :-)
+
+Also don't forget to subscribe to my newsletter on https://academind.com/ to receive the latest updates and exclusive offers!
+
+And in case you didn't know: On the same page as well as on my YouTube channel I got loads of additional tutorials.
+
+Last but not least - I tweet on @maxedapps and on @academind_real, would love to see you there!
+
+
 # Links
 - Angular Material Setup Docs: https://material.angular.io/guide/getting-started
 - Angular Material Component Docs: https://material.angular.io/components/categories
@@ -114,6 +126,7 @@ Edit the styles section in the angular.json file
 - Official Deployment Guide: https://angular.io/guide/deployment
 - Official Firebase Hosting Docs: https://firebase.google.com/docs/hosting/
 - Official Theming Guide: https://material.angular.io/guide/theming
+
 
 # Git
 ```
