@@ -113,6 +113,7 @@ Edit the styles section in the angular.json file
 - More on Lazy Loading: https://angular.io/guide/lazy-loading-ngmodules
 - Official Deployment Guide: https://angular.io/guide/deployment
 - Official Firebase Hosting Docs: https://firebase.google.com/docs/hosting/
+- Official Theming Guide: https://material.angular.io/guide/theming
 
 # Git
 ```
