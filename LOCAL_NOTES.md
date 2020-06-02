@@ -89,6 +89,8 @@ firebase deploy
 - Foreground palette (Used typically on text and icons)
 - Background palette (Used typically on backgrounds)
 
+### Adding Themes with Angular 6 or later
+Edit the styles section in the angular.json file
 
 # Links
 - Angular Material Setup Docs: https://material.angular.io/guide/getting-started
